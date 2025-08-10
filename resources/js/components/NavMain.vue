@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { LucideIcon } from "lucide-vue-next"
 import { ChevronRight } from "lucide-vue-next"
+import { Link, usePage } from '@inertiajs/vue3';
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -27,13 +29,14 @@ defineProps<{
       title: string
       url: string
     }[]
-  }[]
+  }[],
+  title:string
 }>()
 </script>
 
 <template>
   <SidebarGroup>
-    <SidebarGroupLabel>Introduction</SidebarGroupLabel>
+    <SidebarGroupLabel>{{title}}</SidebarGroupLabel>
     <SidebarMenu>
       <Collapsible
         v-for="item in items"
@@ -54,9 +57,13 @@ defineProps<{
             <SidebarMenuSub>
               <SidebarMenuSubItem v-for="subItem in item.items" :key="subItem.title">
                 <SidebarMenuSubButton as-child>
-                  <a :href="subItem.url">
+                  <!-- <a :href="subItem.url">
                     <span>{{ subItem.title }}</span>
-                  </a>
+                  </a> -->
+
+                      <Link :href="subItem.url">
+                    <span>{{ subItem.title }}</span>
+                  </Link>
                 </SidebarMenuSubButton>
               </SidebarMenuSubItem>
             </SidebarMenuSub>
