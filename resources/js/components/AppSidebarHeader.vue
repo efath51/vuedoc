@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Breadcrumbs from '@/components/Breadcrumbs.vue';
 import { SidebarTrigger } from '@/components/ui/sidebar';
+import { useAppearance } from '@/composables/useAppearance';
 import type { BreadcrumbItemType } from '@/types';
 import { Link } from '@inertiajs/vue3';
 withDefaults(
@@ -11,6 +12,16 @@ withDefaults(
         breadcrumbs: () => [],
     },
 );
+const { appearance, updateAppearance } = useAppearance();
+
+import { Monitor, Moon, Sun } from 'lucide-vue-next';
+
+const tabs = [
+    { value: 'light', Icon: Sun, label: 'Light' },
+    { value: 'dark', Icon: Moon, label: 'Dark' },
+
+] as const;
+
 </script>
 
 <template>
@@ -25,8 +36,28 @@ withDefaults(
             </template>
         </div>
 
+
+
         <!-- Right section -->
         <nav class="flex items-center gap-4 pe-5">
+
+            <div class="inline-flex gap-1 rounded-lg bg-neutral-100 p-1 dark:bg-neutral-800">
+                    <button
+                        v-for="{ value, Icon } in tabs"
+                        :key="value"
+                        @click="updateAppearance(value)"
+                        :class="[
+                            'flex items-center rounded-md px-3.5 py-1.5 transition-colors',
+                            appearance === value
+                                ? 'bg-white shadow-xs dark:bg-neutral-700 dark:text-neutral-100'
+                                : 'text-neutral-500 hover:bg-neutral-200/60 hover:text-black dark:text-neutral-400 dark:hover:bg-neutral-700/60',
+                        ]"
+                    >
+                        <component :is="Icon" class="-ml-1 h-4 w-4" />
+
+                    </button>
+             </div>
+
 
             <Link :href="route('home')" class="text-white hover:text-blue-950"> Home </Link>
 
