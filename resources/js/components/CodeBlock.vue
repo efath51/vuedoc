@@ -17,7 +17,7 @@
 
     <div class="flex">
       <div class="flex-shrink-0 select-none p-4 text-right text-zinc-600">
-        <div v-for="n in lineCount" :key="n">{{ n }}</div>
+        <div style="margin-bottom: .9px;" v-for="n in lineCount" :key="n">{{ n }}</div>
       </div>
 
       <pre class="flex-grow p-0 overflow-x-auto"><code class="hljs" v-html="highlightedCode"></code></pre>
