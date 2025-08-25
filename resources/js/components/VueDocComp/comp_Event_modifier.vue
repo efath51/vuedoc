@@ -208,7 +208,6 @@ const eventExampleHTML = `
                 </div>
             </form>
 
-
             <div class="mt-6 rounded-lg bg-muted p-4 shadow">
                 <h2 class="mb-4 text-xl font-semibold text-foreground">Example code</h2>
                 <p class="mb-4 text-muted-foreground">This example demonstrates how to use event modifiers in Vue.js.</p>
@@ -216,7 +215,6 @@ const eventExampleHTML = `
 
                 <p class="mt-4 text-muted-foreground">The HTML code for the example is as follows:</p>
                 <CodeBlock :code="eventExampleHTML" language="html" />
-
             </div>
         </section>
     </div>

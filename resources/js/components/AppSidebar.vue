@@ -92,49 +92,48 @@ const data = {
           url: route("docs.event-modifier"),
           icon: Command,
         },
-       
+        {
+          title: "Lifecycle Hooks",
+          url: route("docs.lifecycle-hooks"),
+          icon: Command,
+        },
+        {
+          title: "Two Way Data Binding",
+          url: route("docs.two-way-data-binding"),
+          icon: Command,
+        },
+         {
+          title: "Component Model",
+          url: route("docs.component-model"),
+          icon: Command,
+        },
+
+
+
       ],
     },
     {
-      title: "Models",
+      title: "Projects",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Invoice",
+          url: route("project.invoice"),
         },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
+
       ],
     },
     {
-      title: "Documentation",
+      title: "Tools",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "WYSIWYG",
+          url: route("tool.wysiwyg"),
         },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
+
       ],
     },
     {

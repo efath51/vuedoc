@@ -59,13 +59,13 @@ const tabs = [
              </div>
 
 
-            <Link :href="route('home')" class="text-white hover:text-blue-950"> Home </Link>
+            <Link :href="route('home')" class="dark:text-white text-black  hover:text-blue-950"> Home </Link>
 
-            <Link :href="route('vue-doc')" class="text-white hover:text-blue-950"> Vue Doc </Link>
+            <Link :href="route('vue-doc')" class="dark:text-white text-black hover:text-blue-950"> Vue Doc </Link>
 
-            <Link :href="route('login')" class="text-white hover:text-blue-950"> Log in </Link>
+            <Link :href="route('login')" class="dark:text-white text-black hover:text-blue-950"> Log in </Link>
 
-            <Link :href="route('register')" class="text-white hover:text-blue-950"> Register </Link>
+            <Link :href="route('register')" class="dark:text-white text-black hover:text-blue-950"> Register </Link>
         </nav>
     </header>
 </template>

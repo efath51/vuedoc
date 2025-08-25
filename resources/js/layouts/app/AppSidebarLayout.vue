@@ -5,10 +5,6 @@ import AppSidebar from "@/components/AppSidebar.vue";
 import AppSidebarHeader from "@/components/AppSidebarHeader.vue";
 import type { BreadcrumbItemType } from "@/types";
 
-// interface Props {
-//   breadcrumbs?: BreadcrumbItemType[];
-// }
-
 const breadcrumbs: BreadcrumbItemType[] = [
     {
         title: 'Dashboard',
@@ -16,19 +12,12 @@ const breadcrumbs: BreadcrumbItemType[] = [
     },
 ];
 
-
-// withDefaults(defineProps<Props>(), {
-//   breadcrumbs: () => [{
-//         title: 'Dashboard',
-//         href: '/dashboard',
-//     },],
-// });
 </script>
 
 <template>
   <AppShell variant="sidebar">
     <AppSidebar />
-    <AppContent variant="sidebar" class="overflow-x-hidden">
+    <AppContent variant="sidebar" >
       <AppSidebarHeader :breadcrumbs="breadcrumbs" />
       <slot />
     </AppContent>

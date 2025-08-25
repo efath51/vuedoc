@@ -7,7 +7,7 @@ Route::get('/', function () {
     return Inertia::render('Home');
 })->name('home');
 
-Route::get('vue-doc', function () {
+Route::get('vue', function () {
     return Inertia::render('VueDocPage');
 })->name('vue-doc');
 
@@ -17,3 +17,4 @@ Route::get('dashboard', function () {
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
+require __DIR__.'/vue.php';
